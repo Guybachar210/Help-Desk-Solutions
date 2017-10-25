@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Drawing.Printing;
 using System.Windows.Forms;
+using Help_Desk_Solutions.brain;
 
 
 namespace Help_Desk_Solutions
@@ -37,6 +38,13 @@ namespace Help_Desk_Solutions
         }
 
         private void sendBtn_Click(object sender, EventArgs e)
+        {
+        ProgramInitator programInitator = new ProgramInitator();
+            programInitator.OnFormSendClicked(paperJamCB.Checked,printerErrorCB.Checked, tonerLowCB.Checked, drumLowCB.Checked, printerTB.Text, notesTB.Text );
+
+        }
+
+       
         {
 
         }

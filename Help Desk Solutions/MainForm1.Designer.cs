@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.paperJamCB = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.printerErrorCB = new System.Windows.Forms.CheckBox();
+            this.tonerLowCB = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.drumLowCB = new System.Windows.Forms.CheckBox();
             this.sendBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.notesTB = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.printerTB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,27 +54,27 @@
             this.paperJamCB.Text = "Paper jam";
             this.paperJamCB.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // printerErrorCB
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.checkBox2.Location = new System.Drawing.Point(37, 45);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(140, 20);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Printer dosen\'t print";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.printerErrorCB.AutoSize = true;
+            this.printerErrorCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.printerErrorCB.Location = new System.Drawing.Point(37, 45);
+            this.printerErrorCB.Name = "printerErrorCB";
+            this.printerErrorCB.Size = new System.Drawing.Size(140, 20);
+            this.printerErrorCB.TabIndex = 1;
+            this.printerErrorCB.Text = "Printer dosen\'t print";
+            this.printerErrorCB.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // tonerLowCB
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.checkBox3.Location = new System.Drawing.Point(37, 75);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(86, 20);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "Toner low";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.tonerLowCB.AutoSize = true;
+            this.tonerLowCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.tonerLowCB.Location = new System.Drawing.Point(37, 75);
+            this.tonerLowCB.Name = "tonerLowCB";
+            this.tonerLowCB.Size = new System.Drawing.Size(86, 20);
+            this.tonerLowCB.TabIndex = 2;
+            this.tonerLowCB.Text = "Toner low";
+            this.tonerLowCB.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -86,16 +86,16 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Printer Solutions";
             // 
-            // checkBox4
+            // drumLowCB
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.checkBox4.Location = new System.Drawing.Point(37, 105);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(82, 20);
-            this.checkBox4.TabIndex = 4;
-            this.checkBox4.Text = "Drum low\r\n";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.drumLowCB.AutoSize = true;
+            this.drumLowCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.drumLowCB.Location = new System.Drawing.Point(37, 105);
+            this.drumLowCB.Name = "drumLowCB";
+            this.drumLowCB.Size = new System.Drawing.Size(82, 20);
+            this.drumLowCB.TabIndex = 4;
+            this.drumLowCB.Text = "Drum low\r\n";
+            this.drumLowCB.UseVisualStyleBackColor = true;
             // 
             // sendBtn
             // 
@@ -117,13 +117,13 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Select your problems";
             // 
-            // textBox1
+            // notesTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(334, 215);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(243, 121);
-            this.textBox1.TabIndex = 7;
+            this.notesTB.Location = new System.Drawing.Point(334, 215);
+            this.notesTB.Multiline = true;
+            this.notesTB.Name = "notesTB";
+            this.notesTB.Size = new System.Drawing.Size(243, 121);
+            this.notesTB.TabIndex = 7;
             // 
             // label3
             // 
@@ -155,10 +155,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkBox2);
+            this.groupBox1.Controls.Add(this.printerErrorCB);
             this.groupBox1.Controls.Add(this.paperJamCB);
-            this.groupBox1.Controls.Add(this.checkBox3);
-            this.groupBox1.Controls.Add(this.checkBox4);
+            this.groupBox1.Controls.Add(this.tonerLowCB);
+            this.groupBox1.Controls.Add(this.drumLowCB);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.groupBox1.Location = new System.Drawing.Point(84, 199);
             this.groupBox1.Name = "groupBox1";
@@ -176,7 +176,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.printerTB);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.notesTB);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.sendBtn);
             this.Controls.Add(this.label1);
@@ -193,13 +193,13 @@
         #endregion
 
         private System.Windows.Forms.CheckBox paperJamCB;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox printerErrorCB;
+        private System.Windows.Forms.CheckBox tonerLowCB;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox drumLowCB;
         private System.Windows.Forms.Button sendBtn;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox notesTB;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox printerTB;
         private System.Windows.Forms.Label label4;
