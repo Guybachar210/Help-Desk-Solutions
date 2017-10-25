@@ -8,11 +8,11 @@ namespace Help_Desk_Solutions
 {
 
 
-    public partial class Helper : Form
+    public partial class MainUIForm : Form
     {
         private object reportViewer;
 
-        public Helper()
+        public MainUIForm()
         {
             InitializeComponent();
         }
@@ -22,7 +22,6 @@ namespace Help_Desk_Solutions
         private void Form1_Load(object sender, EventArgs e)
         {
             SetDefaultPrinter();
-
         }
 
         private void SetDefaultPrinter()
@@ -35,6 +34,11 @@ namespace Help_Desk_Solutions
                     printerTB.Text = printer;
             }
            
+        }
+
+        private void sendBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

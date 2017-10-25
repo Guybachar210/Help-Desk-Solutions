@@ -16,7 +16,7 @@ namespace Help_Desk_Solutions
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Helper());
+            Application.Run(new MainUIForm());
         }
     }
 }

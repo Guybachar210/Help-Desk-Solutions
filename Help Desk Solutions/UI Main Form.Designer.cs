@@ -1,6 +1,6 @@
 ﻿namespace Help_Desk_Solutions
 {
-    partial class Helper
+    partial class MainUIForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.paperJamCB = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.sendBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,16 +43,16 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // checkBox1
+            // paperJamCB
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.checkBox1.Location = new System.Drawing.Point(37, 19);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(89, 20);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Paper jam";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.paperJamCB.AutoSize = true;
+            this.paperJamCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.paperJamCB.Location = new System.Drawing.Point(37, 19);
+            this.paperJamCB.Name = "paperJamCB";
+            this.paperJamCB.Size = new System.Drawing.Size(89, 20);
+            this.paperJamCB.TabIndex = 0;
+            this.paperJamCB.Text = "Paper jam";
+            this.paperJamCB.UseVisualStyleBackColor = true;
             // 
             // checkBox2
             // 
@@ -97,14 +97,15 @@
             this.checkBox4.Text = "Drum low\r\n";
             this.checkBox4.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // sendBtn
             // 
-            this.button1.Location = new System.Drawing.Point(272, 353);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 42);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Send";
-            this.button1.UseVisualStyleBackColor = true;
+            this.sendBtn.Location = new System.Drawing.Point(272, 353);
+            this.sendBtn.Name = "sendBtn";
+            this.sendBtn.Size = new System.Drawing.Size(75, 42);
+            this.sendBtn.TabIndex = 5;
+            this.sendBtn.Text = "Send";
+            this.sendBtn.UseVisualStyleBackColor = true;
+            this.sendBtn.Click += new System.EventHandler(this.sendBtn_Click);
             // 
             // label2
             // 
@@ -155,7 +156,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.paperJamCB);
             this.groupBox1.Controls.Add(this.checkBox3);
             this.groupBox1.Controls.Add(this.checkBox4);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -166,7 +167,7 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Issue";
             // 
-            // Helper
+            // MainUIForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -177,9 +178,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.sendBtn);
             this.Controls.Add(this.label1);
-            this.Name = "Helper";
+            this.Name = "MainUIForm";
             this.Text = "Printer Solutions";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
@@ -191,12 +192,12 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox paperJamCB;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button sendBtn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
