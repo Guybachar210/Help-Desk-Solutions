@@ -142,6 +142,7 @@
             this.printerTB.ReadOnly = true;
             this.printerTB.Size = new System.Drawing.Size(260, 24);
             this.printerTB.TabIndex = 9;
+            this.printerTB.TextChanged += new System.EventHandler(this.printerTB_TextChanged);
             // 
             // label4
             // 

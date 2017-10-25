@@ -10,9 +10,20 @@ namespace Help_Desk_Solutions.brain
     {
         public void OnFormSendClicked(bool isPaperJam, bool isPrinterError, bool isTonerLow, bool isDrumLow, string printerName, string ITNotes)
         {
+            //check if has internet
+            if (!hasInternet())
+            {
+                //1) display error msg: "you dont have internet. Call IT: "
 
+                return;
+
+            }
 
         }
 
+        private bool hasInternet()
+        {
+            return false;
+        }
     }
 }

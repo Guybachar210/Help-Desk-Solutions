@@ -55,6 +55,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportProcessor.cs" />
+    <Compile Include="tools\AppTools.cs" />
+    <Compile Include="tools\DefaultPrinterChecker.cs" />
+    <Compile Include="tools\PopUpMessagesBank.cs" />
     <EmbeddedResource Include="MainForm1.resx">
       <DependentUpon>MainForm1.cs</DependentUpon>
     </EmbeddedResource>

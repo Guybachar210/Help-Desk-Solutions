@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Drawing.Printing;
 using System.Windows.Forms;
 using Help_Desk_Solutions.brain;
+using Help_Desk_Solutions.tools;
 
 
 namespace Help_Desk_Solutions
@@ -18,10 +19,11 @@ namespace Help_Desk_Solutions
             InitializeComponent();
         }
 
-  
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             SetDefaultPrinter();
         }
 
@@ -34,17 +36,18 @@ namespace Help_Desk_Solutions
                 if (settings.IsDefaultPrinter)
                     printerTB.Text = printer;
             }
-           
+
         }
 
         private void sendBtn_Click(object sender, EventArgs e)
         {
-        ProgramInitator programInitator = new ProgramInitator();
-            programInitator.OnFormSendClicked(paperJamCB.Checked,printerErrorCB.Checked, tonerLowCB.Checked, drumLowCB.Checked, printerTB.Text, notesTB.Text );
+            ProgramInitator programInitator = new ProgramInitator();
+            programInitator.OnFormSendClicked(paperJamCB.Checked, printerErrorCB.Checked, tonerLowCB.Checked, drumLowCB.Checked, printerTB.Text, notesTB.Text);
+            
 
         }
 
-       
+        private void printerTB_TextChanged(object sender, EventArgs e)
         {
 
         }

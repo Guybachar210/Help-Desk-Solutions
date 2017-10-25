@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Help_Desk_Solutions.tools;
 
 namespace Help_Desk_Solutions
 {
@@ -14,9 +15,11 @@ namespace Help_Desk_Solutions
         [STAThread]
         static void Main()
         {
+            AppTools.PopMsg("blablbla");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainUIForm());
+
         }
     }
 }
