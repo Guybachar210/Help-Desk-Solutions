@@ -8,9 +8,9 @@ namespace Help_Desk_Solutions.brain
 {
     internal class ProgramInitator
     {
-        public void OnFormSendClicked(bool isPaperJam, bool isPrinterError, bool isTonerLow, bool isDrumLow,
-            string printerName, string ITNotes)
+        public void OnFormSendClicked(bool isPaperJam, bool isPrinterError, bool isTonerLow, bool isDrumLow, string printerName, string ITNotes)
         {
+
 
         }
     }
