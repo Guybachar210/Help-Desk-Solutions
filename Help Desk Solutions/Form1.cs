@@ -1,20 +1,48 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing.Printing;
 using System.Windows.Forms;
+
 
 namespace Help_Desk_Solutions
 {
-    public partial class Form1 : Form
+
+
+    public partial class Helper : Form
     {
-        public Form1()
+        private object reportViewer;
+
+        public Helper()
         {
             InitializeComponent();
         }
+
+  
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            SetDefaultPrinter();
+
+        }
+
+        private void SetDefaultPrinter()
+        {
+            PrinterSettings settings = new PrinterSettings();
+            foreach (string printer in PrinterSettings.InstalledPrinters)
+            {
+                settings.PrinterName = printer;
+                if (settings.IsDefaultPrinter)
+                    printerTB.Text = printer;
+            }
+           
+        }
     }
 }
+
+
+
+
+
+
+
+
