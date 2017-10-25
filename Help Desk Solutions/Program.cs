@@ -15,7 +15,6 @@ namespace Help_Desk_Solutions
         [STAThread]
         static void Main()
         {
-            AppTools.PopMsg("blablbla");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainUIForm());

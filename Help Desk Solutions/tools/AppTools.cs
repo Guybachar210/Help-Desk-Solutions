@@ -21,7 +21,7 @@ namespace Help_Desk_Solutions.tools
                     return printer;
             }
 
-            PopMsg();
+            PopMsg(PopUpMessagesBank.NO_DEFAULT_PRINTER + PopUpMessagesBank.CONTACT_IT);
             return "";
         }
 
