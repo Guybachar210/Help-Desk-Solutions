@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="after form finish\OutlookManager.cs" />
     <Compile Include="after form finish\ProgramInitator.cs" />
     <Compile Include="MainForm1.cs">
       <SubType>Form</SubType>

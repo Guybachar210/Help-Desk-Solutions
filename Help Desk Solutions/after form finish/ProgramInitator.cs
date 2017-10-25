@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Help_Desk_Solutions.tools;
 
 namespace Help_Desk_Solutions.brain
 {
@@ -10,20 +11,17 @@ namespace Help_Desk_Solutions.brain
     {
         public void OnFormSendClicked(bool isPaperJam, bool isPrinterError, bool isTonerLow, bool isDrumLow, string printerName, string ITNotes)
         {
-            //check if has internet
-            if (!hasInternet())
+            //todo: check if has inenet
+            if (!AppTools.hasInternet())
             {
-                //1) display error msg: "you dont have internet. Call IT: "
-
+                AppTools.PopMsg(PopUpMessagesBank.NO_INTERENT_MSG + PopUpMessagesBank.CONTACT_IT);
                 return;
-
             }
 
-        }
+            OutlookManager outlookManager = new OutlookManager();
+            outlookManager.InitiateOutlookMsg(isPaperJam, isPrinterError, isTonerLow, isDrumLow, printerName, ITNotes);
 
-        private bool hasInternet()
-        {
-            return false;
         }
+        
     }
 }
