@@ -16,11 +16,13 @@ namespace Help_Desk_Solutions.brain
         public void OnFormSendClicked(bool isPaperJam, bool isPrinterError, bool isTonerLow, bool isDrumLow,
             string printerName, string ITNotes)
         {
-            if (AppTools.CheckForInternetConnection())
-            { }
-            else
+            if (!AppTools.CheckForInternetConnection())
             {
-                MessageBox.Show("You do not have internet connection" + PopUpMessagesBank.CONTACT_IT);
+               
+                    MessageBox.Show("You do not have internet connection" + PopUpMessagesBank.CONTACT_IT);
+
+                }
+           
             }
             //
             //            OutlookManager outlookManager = new OutlookManager();
@@ -32,7 +34,7 @@ namespace Help_Desk_Solutions.brain
 
 
         }
-    }
+    
 
 
 
