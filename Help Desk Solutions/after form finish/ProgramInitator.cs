@@ -1,27 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.NetworkInformation;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Help_Desk_Solutions.tools;
 
 namespace Help_Desk_Solutions.brain
 {
     internal class ProgramInitator
     {
-        public void OnFormSendClicked(bool isPaperJam, bool isPrinterError, bool isTonerLow, bool isDrumLow, string printerName, string ITNotes)
+        public void OnFormSendClicked(bool isPaperJam, bool isPrinterError, bool isTonerLow, bool isDrumLow,
+            string printerName, string ITNotes)
         {
-            //todo: check if has inenet
-            if (!AppTools.hasInternet())
+            if (AppTools.CheckForInternetConnection())
+            { }
+            else
             {
-                AppTools.PopMsg(PopUpMessagesBank.NO_INTERENT_MSG + PopUpMessagesBank.CONTACT_IT);
-                return;
+                MessageBox.Show("You do not have internet connection" + PopUpMessagesBank.CONTACT_IT);
             }
+            //
+            //            OutlookManager outlookManager = new OutlookManager();
+            //            outlookManager.InitiateOutlookMsg(isPaperJam, isPrinterError, isTonerLow, isDrumLow, printerName, ITNotes);
 
-            OutlookManager outlookManager = new OutlookManager();
-            outlookManager.InitiateOutlookMsg(isPaperJam, isPrinterError, isTonerLow, isDrumLow, printerName, ITNotes);
 
         }
-        
+
+
+
+        }
     }
-}
+
+
+
+
+
+
+
