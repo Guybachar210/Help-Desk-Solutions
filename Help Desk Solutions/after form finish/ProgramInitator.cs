@@ -18,23 +18,25 @@ namespace Help_Desk_Solutions.brain
         {
             if (!AppTools.CheckForInternetConnection())
             {
-               
-                    MessageBox.Show("You do not have internet connection" + PopUpMessagesBank.CONTACT_IT);
-
-                }
-           
+                MessageBox.Show(PopUpMessagesBank.NO_INTERENT_MSG + PopUpMessagesBank.CONTACT_IT);
+                return;
             }
-            //
-            //            OutlookManager outlookManager = new OutlookManager();
-            //            outlookManager.InitiateOutlookMsg(isPaperJam, isPrinterError, isTonerLow, isDrumLow, printerName, ITNotes);
 
-
-        }
-
-
+            OutlookManager outlookManager = new OutlookManager();
+            outlookManager.InitiateOutlookMsg(isPaperJam, isPrinterError, isTonerLow, isDrumLow, printerName, ITNotes);
 
         }
-    
+        //
+        //            
+        //            
+
+
+    }
+
+
+
+}
+
 
 
 
