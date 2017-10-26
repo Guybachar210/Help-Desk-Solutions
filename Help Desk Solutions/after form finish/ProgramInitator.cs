@@ -23,13 +23,9 @@ namespace Help_Desk_Solutions.brain
             }
 
             OutlookManager outlookManager = new OutlookManager();
-            outlookManager.SendMsg(isPaperJam, isPrinterError, isTonerLow, isDrumLow, printerName, ITNotes);
+            outlookManager.InitOutlook(isPaperJam, isPrinterError, isTonerLow, isDrumLow, printerName, ITNotes);
 
         }
-        //
-        //            
-        //            
-
 
     }
 

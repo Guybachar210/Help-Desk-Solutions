@@ -47,7 +47,7 @@
             // 
             this.paperJamCB.AutoSize = true;
             this.paperJamCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.paperJamCB.Location = new System.Drawing.Point(37, 19);
+            this.paperJamCB.Location = new System.Drawing.Point(11, 19);
             this.paperJamCB.Name = "paperJamCB";
             this.paperJamCB.Size = new System.Drawing.Size(89, 20);
             this.paperJamCB.TabIndex = 0;
@@ -58,18 +58,18 @@
             // 
             this.printerErrorCB.AutoSize = true;
             this.printerErrorCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.printerErrorCB.Location = new System.Drawing.Point(37, 45);
+            this.printerErrorCB.Location = new System.Drawing.Point(11, 131);
             this.printerErrorCB.Name = "printerErrorCB";
-            this.printerErrorCB.Size = new System.Drawing.Size(140, 20);
+            this.printerErrorCB.Size = new System.Drawing.Size(112, 20);
             this.printerErrorCB.TabIndex = 1;
-            this.printerErrorCB.Text = "Printer dosen\'t print";
+            this.printerErrorCB.Text = "Other problem";
             this.printerErrorCB.UseVisualStyleBackColor = true;
             // 
             // tonerLowCB
             // 
             this.tonerLowCB.AutoSize = true;
             this.tonerLowCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.tonerLowCB.Location = new System.Drawing.Point(37, 75);
+            this.tonerLowCB.Location = new System.Drawing.Point(11, 45);
             this.tonerLowCB.Name = "tonerLowCB";
             this.tonerLowCB.Size = new System.Drawing.Size(86, 20);
             this.tonerLowCB.TabIndex = 2;
@@ -90,7 +90,7 @@
             // 
             this.drumLowCB.AutoSize = true;
             this.drumLowCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.drumLowCB.Location = new System.Drawing.Point(37, 105);
+            this.drumLowCB.Location = new System.Drawing.Point(11, 71);
             this.drumLowCB.Name = "drumLowCB";
             this.drumLowCB.Size = new System.Drawing.Size(82, 20);
             this.drumLowCB.TabIndex = 4;
@@ -161,9 +161,9 @@
             this.groupBox1.Controls.Add(this.tonerLowCB);
             this.groupBox1.Controls.Add(this.drumLowCB);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.groupBox1.Location = new System.Drawing.Point(84, 199);
+            this.groupBox1.Location = new System.Drawing.Point(84, 179);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 137);
+            this.groupBox1.Size = new System.Drawing.Size(200, 157);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Issue";
