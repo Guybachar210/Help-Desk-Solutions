@@ -24,7 +24,6 @@
 
         private void SendMsg(string msgContent)
         {
-
             Microsoft.Office.Interop.Outlook.Application oApp = new Microsoft.Office.Interop.Outlook.Application();
             Microsoft.Office.Interop.Outlook._MailItem oMailItem = (Microsoft.Office.Interop.Outlook._MailItem)oApp.CreateItem(Microsoft.Office.Interop.Outlook.OlItemType.olMailItem);
             oMailItem.To = OutlookBank.TO;
@@ -32,7 +31,6 @@
             oMailItem.Body = msgContent;
             oMailItem.Display(false);
             oMailItem.Send();
-
         }
     }
 }
