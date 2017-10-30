@@ -17,6 +17,7 @@ namespace Help_Desk_Solutions
         public MainUIForm()
         {
             InitializeComponent();
+            CenterToScreen();
         }
 
 

@@ -39,7 +39,8 @@ namespace Help_Desk_Solutions.brain
 
 
             //check if outlook is closed... and open it up
-           AppTools.isOutlook();
+           bool outlookWasOpen = 
+           AppTools.();
 
  
             oMailItem.Body = msgContent;
