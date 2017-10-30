@@ -11,6 +11,6 @@ namespace Help_Desk_Solutions.tools
         public static string CONTACT_IT = "\nCall IT support: 81253";
         public static string NO_DEFAULT_PRINTER = "You do not have a printer";
         public static string NO_INTERENT_MSG = "No Internet connection";
-        public static string IT_NOTIFIED = "IT Team Notified!";
+        public static string SENT = "Sent!";
     }
 }

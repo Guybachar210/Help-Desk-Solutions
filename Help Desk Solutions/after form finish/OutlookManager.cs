@@ -1,4 +1,7 @@
-﻿namespace Help_Desk_Solutions.brain
+﻿using System.Windows.Forms;
+using Help_Desk_Solutions.tools;
+
+namespace Help_Desk_Solutions.brain
 {
 
     internal class OutlookManager
@@ -31,6 +34,8 @@
             oMailItem.Body = msgContent;
             oMailItem.Display(false);
             oMailItem.Send();
+
+            MessageBox.Show(PopUpMessagesBank.SENT);
         }
     }
 }
