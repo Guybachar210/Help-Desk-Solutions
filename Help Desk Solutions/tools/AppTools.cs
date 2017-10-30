@@ -51,5 +51,33 @@ namespace Help_Desk_Solutions.tools
             }
 
         }
+
+        public static void InitOutlook()
+        {
+            Microsoft.Win32.RegistryKey key =
+                Microsoft.Win32.Registry.LocalMachine.OpenSubKey("Software\\microsoft\\windows\\currentversion\\app paths\\OUTLOOK.EXE");
+            string path = (string)key.GetValue("Path");
+            if (path != null)
+                System.Diagnostics.Process.Start("OUTLOOK.EXE");
+            else
+                MessageBox.Show("There is no Outlook in this computer!", "SystemError", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
+        public static bool IsOutlookOpen()
+        {
+            int procCount = 0;
+            Process[] processlist = Process.GetProcessesByName("OUTLOOK");
+            foreach (Process theprocess in processlist)
+            {
+                procCount++;
+            }
+            if (procCount > 0) return true;
+            return false;
+
+        }
+
+
     }
+
+}
 
