@@ -51,20 +51,5 @@ namespace Help_Desk_Solutions.tools
             }
 
         }
-
-        public bool IsOutlookOpen()
-        {
-            int procCount = 0;
-            Process[] processlist = Process.GetProcessesByName("OUTLOOK");
-            foreach (Process theprocess in processlist)
-            {
-                procCount++;
-            }
-            if (procCount > 0)return true;
-            return false;
-
-        }
     }
 
-
-}
