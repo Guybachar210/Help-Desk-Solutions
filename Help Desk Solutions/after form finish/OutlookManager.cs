@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using Help_Desk_Solutions.tools;
 using System.Diagnostics;
 using Microsoft.Office.Interop.Outlook;
+using Application = System.Windows.Forms.Application;
 
 namespace Help_Desk_Solutions.brain
 {
@@ -39,16 +40,22 @@ namespace Help_Desk_Solutions.brain
 
 
             //check if outlook is closed... and open it up
-           bool outlookWasOpen = 
-           AppTools.();
+            bool outlookWasOpen = AppTools.IsOutlookOpen();
 
- 
+            if (!outlookWasOpen)
+                AppTools.InitOutlook();
+
             oMailItem.Body = msgContent;
             oMailItem.Display(false);
             oMailItem.DeleteAfterSubmit = true;
             oMailItem.Send();
 
-            MessageBox.Show(PopUpMessagesBank.SENT);
+            if (!outlookWasOpen)
+                oApp.Quit();
+
+
+            MessageBox.Show(PopUpMessagesBank.SENT, PopUpMessagesBank.INFORMATION);
+            Application.Exit();
         }
     }
 }
