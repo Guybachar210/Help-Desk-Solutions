@@ -1,11 +1,16 @@
-﻿using System.Windows.Forms;
+﻿using System.Runtime.InteropServices;
+using System.Windows.Forms;
 using Help_Desk_Solutions.tools;
+using System.Diagnostics;
+using Microsoft.Office.Interop.Outlook;
 
 namespace Help_Desk_Solutions.brain
 {
 
     internal class OutlookManager
     {
+        private Microsoft.Office.Interop.Outlook.Application outlookObj;
+
         private string CreateMsg(bool isPaperJam, bool isPrinterError, bool isTonerLow, bool isDrumLow, string printerName, string itNotes)
         {
             var msgContent = OutlookBank.CONTENT_PREFIX;
@@ -31,11 +36,20 @@ namespace Help_Desk_Solutions.brain
             Microsoft.Office.Interop.Outlook._MailItem oMailItem = (Microsoft.Office.Interop.Outlook._MailItem)oApp.CreateItem(Microsoft.Office.Interop.Outlook.OlItemType.olMailItem);
             oMailItem.To = OutlookBank.TO;
             oMailItem.Subject = OutlookBank.SUBJECT;
+
+
+            //check if outlook is closed... and open it up
+           AppTools.isOutlook();
+
+ 
             oMailItem.Body = msgContent;
             oMailItem.Display(false);
             oMailItem.Send();
-
+            oMailItem.DeleteAfterSubmit = true;
             MessageBox.Show(PopUpMessagesBank.SENT);
+            oApp.Quit();
+            
+
         }
     }
 }
