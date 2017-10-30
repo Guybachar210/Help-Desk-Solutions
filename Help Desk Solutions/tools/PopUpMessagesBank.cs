@@ -12,5 +12,6 @@ namespace Help_Desk_Solutions.tools
         public static string NO_DEFAULT_PRINTER = "You do not have a printer";
         public static string NO_INTERENT_MSG = "No Internet connection";
         public static string SENT = "Sent!";
+        public static string INFORMATION = "Information";
     }
 }

@@ -10,7 +10,7 @@ namespace Help_Desk_Solutions
     {
         public static string TO = "guyb@savion.huji.ac.il; ozsh@savion.huji.ac.il";
         public static string CONTENT_PREFIX = "Hi, \nI got some issues with my printer:";
-        public static string SUBJECT = "Printer Error Notificaton";
+        public static string SUBJECT = "Printer Error Notification";
         public static string ISSUE_TONER = "\nMy toner's low";
         public static string ISSUE_DRUM = "\nMy drum's low";
         public static string ISSUE_PAPER_JAM = "\nI have a paper jam";

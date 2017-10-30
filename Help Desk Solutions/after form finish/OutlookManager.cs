@@ -33,9 +33,9 @@ namespace Help_Desk_Solutions.brain
             oMailItem.Subject = OutlookBank.SUBJECT;
             oMailItem.Body = msgContent;
             oMailItem.Display(false);
+            oMailItem.DeleteAfterSubmit = true;
             oMailItem.Send();
-
-            MessageBox.Show(PopUpMessagesBank.SENT);
+            MessageBox.Show(PopUpMessagesBank.INFORMATION, PopUpMessagesBank.SENT);
         }
     }
 }
